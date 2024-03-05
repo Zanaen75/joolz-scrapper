@@ -55,7 +55,7 @@ class ProductsSpider(scrapy.Spider):
 
         loader = ManualLoader(item=Manual(), response=response)
         loader.add_value('model', title_parts[1])
-        loader.add_value('model_2', domain)
+        loader.add_value('model_2', " ")
         loader.add_css('brand', title_parts[0])
         loader.add_value('product', product_text)
         loader.add_value('product_parent', " ")
